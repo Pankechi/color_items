@@ -50,9 +50,6 @@ export default {
       
    }
   },
-  setup: {
-    
-  }
   
 }
 </script>

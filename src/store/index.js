@@ -57,11 +57,11 @@ export default createStore({
     // ]
       
   },
-  mutations: {
-    // CHANGE_QUANTITY(state, id, number) {
-    //   state.items[]
-    // }
-  },
+  // mutations: {
+  //   CHANGE_QUANTITY(state, item) {
+  //     state.items[]
+  //   }
+  // },
   getters: {
     
   }

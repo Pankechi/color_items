@@ -33,9 +33,9 @@ export default {
     deletBrick() {
       this.numbers--
     },
-    changeQuantity() {
-      console.log(this.numbers)
-    },
+    // changeQuantity() {
+    //   this.numbers = 
+    // },
   },
   watch: {
     main_checked: function(newVal) {
