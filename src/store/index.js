@@ -2,16 +2,41 @@ import { createStore } from 'vuex'
 
 export default createStore({
   state: {
-    items:[
-       [
-        {id: 1,quantity: 1, color: 'black'},
-        {id: 2,quantity: 3, color: 'red'},
-    ],
-       [
-      {id: 3,quantity: 5, color: 'yellow'},
-      {id: 4,quantity: 6, color: 'red'},
-  ],
-],
+    lists: 
+       [ 
+        [
+          {id: 1,quantity: 10, color:'#440808'},
+          {id: 2,quantity: 12, color:'red'},
+          {id: 3,quantity: 6, color: 'green'},
+          {id: 4,quantity: 9, color: 'blue'},
+          {id: 5,quantity: 8, color: 'teal'},
+          {id: 6,quantity: 3, color: 'pink'},
+          {id: 7,quantity: 5, color: 'gray'},
+          {id: 8,quantity: 1, color: 'black'},
+          {id: 9,quantity: 4, color: 'green'},
+        ],
+       
+          [
+          {id: 10,quantity: 2, color: 'gray'},
+          {id: 11,quantity: 6, color: 'black'},
+          {id: 12,quantity: 9, color: 'blue'},
+          {id: 13,quantity: 1, color: 'red'},
+          {id: 14,quantity: 5, color: 'pink'},
+          {id: 15,quantity: 4, color: 'yellow'},
+        ],
+      ],
+      
+    },
+//     items:[
+//        [
+//         {id: 1,quantity: 1, color: 'black'},
+//         {id: 2,quantity: 3, color: 'red'},
+//     ],
+//        [
+//       {id: 3,quantity: 5, color: 'yellow'},
+//       {id: 4,quantity: 6, color: 'red'},
+//   ],
+// ],
     // lists: [
     //   [
     //     {id: 1,quantity: 1, color: 'black'},
@@ -56,13 +81,35 @@ export default createStore({
     //   // ],
     // ]
       
-  },
-  // mutations: {
-  //   CHANGE_QUANTITY(state, item) {
-  //     state.items[]
-  //   }
-  // },
   getters: {
-    
-  }
+    GET_COLOR(state, id) {
+      for (let i = 0; i < state.lists.length; i++) {
+        for(let j = 0; j < state.lists[i].length; j++) {
+          if (state.lists[i][j].id == id) {
+           return state.lists[i][j].color 
+          }
+        }
+      }
+    }
+  },  
+  mutations: {
+    CHANGE_QUANTITY(state, odject) {
+      for (let i = 0; i < state.lists.length; i++) {
+        for(let j = 0; j < state.lists[i].length; j++) {
+          if (state.lists[i][j].id == odject.id) {
+            state.lists[i][j].quantity = odject.quantity
+          }
+        }
+      }
+    },
+    CHANGE_COLOR (state, odject) {
+      for (let i = 0; i < state.lists.length; i++) {
+        for(let j = 0; j < state.lists[i].length; j++) {
+          if (state.lists[i][j].id == odject.id) {
+            state.lists[i][j].color = odject.color
+          }
+        }
+      }
+    },
+  },
 })

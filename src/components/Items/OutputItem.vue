@@ -1,11 +1,11 @@
 <template>
   <div class="brick_wrap">
-
-    <div  v-for="brick in item" :key="brick" >
-      <div v-for="doge in brick.quantity" :key="doge" :style="{'background-color': brick.color}" class="brick"></div>
+    <div  v-for="wall in item" :key="wall" >
+      <div v-for="bricks in wall" :key="bricks" class="brick" :style="{'background-color': bricks.color}">
+      </div>
     </div>
-
   </div>
+
 
 </template>
 
@@ -13,8 +13,13 @@
 
 export default {
   props: {
-    item: Object
+    item: Array
   },
+  data() {
+    return{
+
+    }
+  }
 }
 </script>
 <style>

@@ -2,15 +2,15 @@
   <div enter-class="input-list__wrapper">
     <div class="list__info">
       <button @click="toggleDropdown" class="list__button"><i class="arrow" :class="swap"></i></button>
-      <input v-model="checked" type="checkbox">test
+      <input v-model="checked" type="checkbox">{{}}
   </div>
   <div v-if="toggle" class="dropdown__items">
     <!-- <InputItem :main_checked="checked" :item="item" v-for="item in item_list" :key="item"></InputItem>  -->
     <InputItem :item="list" v-for="list in item_list" :key="list" :main_checked="checked"></InputItem>
   </div>
-  <div v-for="item, in item_list" :key="item" class="bricks_wrapper">
+  <!-- <div v-for="item, in item_list" :key="item" class="bricks_wrapper">
     
-  </div>
+  </div> -->
 </div>
 
 </template>
@@ -43,13 +43,7 @@ export default {
       this.checked = !this.checked
     },
   },
-  mounted() {
-   for(let i = 0; i < this.item_list.length; i++) {
-    console.log(this.item_list[i].quantity)
-      console.log(this.item_list[i].color)
-      
-   }
-  },
+  
   
 }
 </script>
