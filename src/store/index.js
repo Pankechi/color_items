@@ -58,9 +58,9 @@ export default createStore({
       
   },
   mutations: {
-    CHANGE_QUANTITY(state, id, number) {
-      state.items[]
-    }
+    // CHANGE_QUANTITY(state, id, number) {
+    //   state.items[]
+    // }
   },
   getters: {
     
