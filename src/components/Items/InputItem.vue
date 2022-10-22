@@ -55,9 +55,6 @@ export default {
     },
   },
   methods: {
-    deletBrick() {
-      this.numbers--
-    },
     findColor() {
       for (let i = 0; i < this.$store.state.lists.length; i++) {
         for(let j = 0; j < this.$store.state.lists[i].length; j++) {

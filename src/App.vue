@@ -3,19 +3,24 @@
     <div class="input__wrapper">
       <InputList :item_list="list" v-for="list in $store.state.lists" :key="list"></InputList>
     </div>
-    <OutputItem :item="$store.state.lists"></OutputItem>
+    <div class="output__wrapper">
+      <OutputList v-for="list in $store.state.lists" :key="list" :item="list"></OutputList>
+    </div>
+    <!-- <OutputItem :item="$store.state.lists"></OutputItem> -->
   </div>
 </template>
   
 <script>
 import InputList from './components/Items/InputList.vue'
-import OutputItem from'./components/Items/OutputItem.vue'
+// import OutputItem from'./components/Items/OutputItem.vue'
+import OutputList from'./components/Items/OutputList.vue'
 
 
 export default {
   components: {
     InputList,
-    OutputItem,
+    // OutputItem,
+    OutputList
   },
 }
 </script>
@@ -28,6 +33,11 @@ export default {
   }
 
   .input__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .output__wrapper {
     display: flex;
     flex-direction: column;
   }
