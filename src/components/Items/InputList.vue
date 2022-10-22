@@ -1,16 +1,12 @@
 <template>
-  <div enter-class="input-list__wrapper">
+  <div class="input-list__wrapper">
     <div class="list__info">
       <button @click="toggleDropdown" class="list__button"><i class="arrow" :class="swap"></i></button>
-      <input v-model="checked" type="checkbox">{{}}
+      <input v-model="checked" type="checkbox">List
   </div>
   <div v-if="toggle" class="dropdown__items">
-    <!-- <InputItem :main_checked="checked" :item="item" v-for="item in item_list" :key="item"></InputItem>  -->
     <InputItem :item="list" v-for="list in item_list" :key="list" :main_checked="checked"></InputItem>
   </div>
-  <!-- <div v-for="item, in item_list" :key="item" class="bricks_wrapper">
-    
-  </div> -->
 </div>
 
 </template>
@@ -27,8 +23,6 @@ export default {
       toggle: false,
       swap: 'right',
       checked: false,
-      bricks: []
-
     }
   },
   props:{
@@ -42,17 +36,19 @@ export default {
     checkedSwap() {
       this.checked = !this.checked
     },
+    doge() {
+
+    }
   },
-  
-  
+   
 }
 </script>
 
 <style>
 
 .input-list__wrapper {
-  display: flex;
-  margin: 10px 5px;
+  width: 470px;
+  
 }
 
 .list__info {

@@ -6,20 +6,17 @@
     <div class="output__wrapper">
       <OutputList v-for="list in $store.state.lists" :key="list" :item="list"></OutputList>
     </div>
-    <!-- <OutputItem :item="$store.state.lists"></OutputItem> -->
   </div>
 </template>
   
 <script>
 import InputList from './components/Items/InputList.vue'
-// import OutputItem from'./components/Items/OutputItem.vue'
 import OutputList from'./components/Items/OutputList.vue'
 
 
 export default {
   components: {
     InputList,
-    // OutputItem,
     OutputList
   },
 }
@@ -29,7 +26,7 @@ export default {
   .app__wrapper {
     display: flex;
     flex-direction: row;
-    gap: 90px;
+    gap: 30px;
   }
 
   .input__wrapper {

@@ -2,7 +2,7 @@
 <template>
   <div class="item__wrapper">
     <div class="item__input">
-      <input v-model="checked" type="checkbox" class="item_check" name="" id="">Test
+      <input @change="doActive" v-model="checked" type="checkbox" class="item_check" name="" id="">Test
       <input v-on:change="changeQuantity" v-model="number" type="number" min="0">
       <input v-model="color" type="color" :default="color">
     </div>
@@ -74,6 +74,9 @@ export default {
         }
       }
     },
+    doActive() {
+      this.$store.commit('SET_VISIBLE', this.item.id)
+    }
   },  
 
   watch: {
@@ -119,4 +122,9 @@ export default {
   flex-direction: row;
   gap: 5px;
 }
+
+.item__quantity {
+  width: 20px;
+}
+
 </style>

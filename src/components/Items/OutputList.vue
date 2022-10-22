@@ -1,7 +1,9 @@
 <template>
 
   <div class="brick_wrap">
-    <OutputItem :bricks="brick" v-for="brick in item" :key="brick"></OutputItem>
+    <div class="line_divider">
+      <OutputItem :bricks="brick" v-for="brick in item" :key="brick"></OutputItem>
+    </div>
   </div>
 
 </template>
@@ -18,10 +20,13 @@ export default {
   },
   data() {
     return{
-    }
+
+  }
   },
-  
+  methods: {    
+  },
 }
+
 </script>
 
 <style>
@@ -32,8 +37,17 @@ export default {
     gap: 5px;
     flex-wrap: wrap;
     width: 600px;
-    margin-bottom: 50px;
+    margin-top: 15px;
+    border: 1px solid;
+    padding: 19px;
   }
+
+  .line_divider {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
   .brick {
     width: 20px;
     height: 20px;

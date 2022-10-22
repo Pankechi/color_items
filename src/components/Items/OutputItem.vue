@@ -1,5 +1,7 @@
 <template>   
+<div v-if="bricks.is_active" class="line_wrapper">
     <div @click="brickRemove" v-for="brick in number" :key="brick" :class="[default_class, id]" :style="{'background-color': bricks.color}"></div>
+  </div>
 </template>
 
 <script>
@@ -38,15 +40,17 @@ export default {
   }, 
 }
 </script>
+
 <style>
 
-  .brick_wrap {
+  .line_wrapper {
     display: flex;
-    flex-direction: column;
-    gap: 5
-  }
+    gap: 5px;
+  } 
+
   .brick {
     width: 20px;
     height: 20px;
   }
+  
 </style>
