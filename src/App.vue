@@ -10,8 +10,8 @@
 </template>
   
 <script>
-import InputList from './components/Items/InputList.vue'
-import OutputList from'./components/Items/OutputList.vue'
+import InputList from './components/Lists/InputList.vue'
+import OutputList from'./components/Lists/OutputList.vue'
 
 
 export default {

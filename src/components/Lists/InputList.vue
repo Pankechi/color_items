@@ -13,7 +13,7 @@
 
 <script>
 
-import InputItem from './InputItem.vue'
+import InputItem from '../Items/InputItem.vue'
 export default {
   components: {
     InputItem,
