@@ -1,17 +1,32 @@
 <template>
   <div v-if="sorted" class="brick_wrap">
-    <button class="sort_button" @click="sortChange">Перемешать</button>
+    <button 
+    class="sort_button" 
+    @click="sortChange">
+    Перемешать
+    </button>
     <div>
       <div class="line_divider">
-        <OutputItem :bricks="brick" v-for="brick in item" :key="brick"></OutputItem>
+        <OutputItem 
+        :bricks="brick" 
+        v-for="brick in item" 
+        :key="brick">
+      </OutputItem>
       </div>
     </div>
   </div>
 
-  <div v-if="!sorted" class="brick_wrap">
-      <button class="sort_button" @click="sortChange">Сортировать</button>
+  <div v-if="!sorted" 
+  class="brick_wrap">
+      <button class="sort_button" 
+      @click="sortChange">
+      Сортировать
+    </button>
     <div class="random_wrapper">
-      <OutputItem :bricks="brick" v-for="brick in item" :key="brick"></OutputItem>
+      <OutputItem 
+      :bricks="brick" 
+      v-for="brick in item" 
+      :key="brick"></OutputItem>
     </div>
   </div>
 </template>

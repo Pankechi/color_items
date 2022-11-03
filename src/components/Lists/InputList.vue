@@ -1,11 +1,26 @@
 <template>
   <div class="input-list__wrapper">
     <div class="list__info">
-      <button @click="toggleDropdown" class="list__button"><i class="arrow" :class="swap"></i></button>
-      <input v-model="checked" type="checkbox">List
+      <button 
+      @click="toggleDropdown" 
+      class="list__button">
+      <i 
+      class="arrow" 
+      :class="swap"
+      ></i></button>
+      <input 
+      v-model="checked" 
+      type="checkbox">List
   </div>
-  <div v-if="toggle" class="dropdown__items">
-    <InputItem :item="list" v-for="list in item_list" :key="list" :main_checked="checked"></InputItem>
+  <div 
+  v-if="toggle" 
+  class="dropdown__items">
+    <InputItem 
+      :item="list" 
+      v-for="list in item_list" 
+      :key="list" 
+      :main_checked="checked">
+    </InputItem>
   </div>
 </div>
 

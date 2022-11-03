@@ -1,6 +1,12 @@
 <template>   
 <div v-if="bricks.is_active" class="line_wrapper">
-    <div @click="brickRemove" v-for="brick in number" :key="brick" :class="[default_class, id]" :style="{'background-color': bricks.color}"></div>
+    <div 
+    @click="brickRemove" 
+    v-for="brick in number" 
+    :key="brick" 
+    :class="[default_class, id]" 
+    :style="{'background-color': bricks.color}">
+  </div>
   </div>
 </template>
 
